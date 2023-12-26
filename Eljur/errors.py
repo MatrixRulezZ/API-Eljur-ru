@@ -24,12 +24,14 @@ def _checkStatus(err, url):
 
 
 def _checkSubdomain(subdomain):
+    subdomain_school = subdomain
     subdomain = re.search(r"[a-zA-Z0-9]+", subdomain)
     if not subdomain:
         return {"error": {"error_code": -101,
                           "error_msg": "Поддомен не найден"}}
     else:
-        return subdomain[0]
+        #return subdomain[0]
+        return subdomain_school
 
 
 def _checkInstance(obj, cls):
